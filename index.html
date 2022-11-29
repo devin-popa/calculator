@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Calculator With HTML, CSS, and JavaSscript</title>
+</head>
+
+<body>
+    <!-- Load in JS script -->
+    <script type="text/javascript" src="app.js"></script>
+    <!-- Calculator div-->
+    <div class="container">
+        <div class="calculator">
+            <!-- Display numbers and functions -->
+            <div class="calc-display">
+                <p id="display" value="0">0</p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <!-- First row -->
+                <button class="button-num" value="1" onclick="addToDisplay(this);">1</button>
+                <button class="button-num" value="2" onclick="addToDisplay(this);">2</button>
+                <button class="button-num" value="3" onclick="addToDisplay(this);">3</button>
+                <button class="button-op" value="+" onclick="addToDisplay(this);"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                <!-- Second row -->
+                <button class="button-num" value="4" onclick="addToDisplay(this);">4</button>
+                <button class="button-num" value="5" onclick="addToDisplay(this);">5</button>
+                <button class="button-num" value="6" onclick="addToDisplay(this);">6</button>
+                <button class="button-op" value="-" onclick="addToDisplay(this);"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                <!-- Third row -->
+                <button class="button-num" value="7" onclick="addToDisplay(this);">7</button>
+                <button class="button-num" value="8" onclick="addToDisplay(this);">8</button>
+                <button class="button-num" value="9" onclick="addToDisplay(this);">9</button>
+                <button class="button-op" value="*" onclick="addToDisplay(this);"><i class="fa fa-times" aria-hidden="true"></i></button>
+                <!-- Fourth row -->
+                <button class="button-num" value="." onclick="addToDisplay(this);">.</button>
+                <button class="button-num" value="0" onclick="addToDisplay(this);">0</button>
+                <button class="button-num" id="button-neg" value="-" onclick="addToDisplay(this);">-</button>
+                <button class="button-op" value="/" onclick="addToDisplay(this);"><i class="fa fa-divide" aria-hidden="true"></i></button>
+                <!-- Final row -->
+                <button class="button-eq" onclick="compute();"><i class="fa fa-equals" aria-hidden="true"></i></button>
+                <button class="button-num" id="button-clear" value="clear" onclick="resetDisplay();">CLEAR</button>
+                <button class="button-op" value="**" onclick="addToDisplay(this);">^</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
