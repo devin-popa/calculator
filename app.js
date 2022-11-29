@@ -8,10 +8,10 @@ function addToDisplay(btn) {
     btnVal = btn.getAttribute("value");
     if (val == "0") {
         display.setAttribute("value", btnVal);
-        display.innerHTML = btn.innerHTML;
+        display.innerHTML = btn.getAttribute("id") == "button-neg" ? "-" : btn.innerHTML;
     } else {
         display.setAttribute("value", val + btnVal);
-        display.innerHTML += btn.innerHTML;
+        display.innerHTML = btn.getAttribute("id") == "button-neg" ? display.innerHTML + "-" : display.innerHTML + btn.innerHTML;
     }
 }
 
